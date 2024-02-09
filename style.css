@@ -1,0 +1,108 @@
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-size: 20px;
+  text-shadow:
+    0 0 1px white,
+    0 0 5px rgba(246,110,255,1);
+  
+  color: white;
+  background: rgb(138,74,204);
+  background: linear-gradient(0deg, rgba(138,74,204,1) 0%, rgba(241,214,255,1) 100%);
+}
+
+
+.container {
+  text-align: center;
+}
+
+#cat {
+  width: 300px;
+  height: 300px;
+  border-radius: 30px;
+  box-shadow: 
+    0 0 5px white,
+    0 0 40px rgba(246,110,255,1);
+}
+
+#clickableBtn {
+  width: 70px ;
+  height: 70px ;
+  border-radius: 35px;
+  border: none;
+  box-shadow:
+    0 0 5px white,
+    0 0 15px rgba(0,225,255,1);
+  font-size: 18px;
+  color: white;
+  background: rgb(0,66,255);
+  background: radial-gradient(circle, rgba(0,66,255,1) 0%, rgba(63,226,251,1) 92%);
+
+}
+
+#dynamicBtn {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  border: none;
+  box-shadow:
+    0 0 5px white,
+    0 0 15px rgba(255,50,50,1);
+  font-size: 18px;
+  color: white;
+  background: rgb(126,25,25);
+  background: radial-gradient(circle, rgba(126,25,25,1) 0%, rgba(255,110,110,1) 100%);
+  
+}
+
+@keyframes fallHearts {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 1;
+  }
+}
+
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  clip-path: polygon(51% 100%, 91% 61%, 100% 33%, 91% 7%, 66% 3%, 49% 22%, 30% 4%, 9% 8%, 0 34%, 7% 60%);
+  animation: fallHearts 2s linear infinite;
+}
+
+/* Add this to your existing styles */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(246,110,255,0.5);
+  border-radius: 40px;
+  padding: 20px;
+  z-index: 999;
+  box-shadow: 
+    0 0 5px white,
+    0 0 40px rgba(246,110,255,1);
+}
+
+.modal img {
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 30px;
+  box-shadow: 
+   0 0 5px  white ,
+   0 0 40px rgba(246,110,255,1) ;
+}
